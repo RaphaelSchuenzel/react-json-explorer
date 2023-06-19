@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+:root {
+  --white: #fff;
+  --gray-light: #cacaca;
+  --gray-dark: #202020;
+  --black: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  color: var(--gray-light);
+  background: var(--black);
+  margin: 1rem;
+}
+
+.input-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+input,
+textarea,
+pre {
+  font-family: inherit;
+  width: 100%;
+}
+
+input,
+textarea {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background: inherit;
+  color: var(--gray-light);
+  border: 0.125rem solid var(--gray-dark);
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  border: 0.125rem solid var(--gray-light);
+  outline: none;
+}
+
+textarea {
+  min-height: 20rem;
+}
+
+pre {
+  color: var(--gray-light);
+  background: var(--gray-dark);
+  margin: 0;
+  padding: 1rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  white-space: pre-line;
+}
+
+pre .indent {
+  padding-left: 1rem;
+}
+
+pre .json-entry:after {
+  content: "\A";
+}
+
+pre .json-key {
+  margin-right: 0.25rem;
+}
+
+pre .json-key span {
+  cursor: pointer;
+  color: var(--white);
+}
+
+.json-explorer {
+  padding: 1rem;
+}
+
+.json-explorer section {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.json-explorer section > .input-wrapper {
+  padding-right: 1rem;
+}
+
+.json-explorer section > .input-wrapper pre {
+  height: 100%;
+  margin-top: 1rem;
+}
+
+.input-wrapper label {
+  margin-right: 0.5rem;
+}
